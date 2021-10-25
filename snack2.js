@@ -1,44 +1,56 @@
+let points = 0;
+let fouls = 0;
+
 const footballTeams = [
     {
         name: 'Juventus',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
     {
         name: 'Barcellona',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
     {
         name: 'Inter',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
     {
         name: 'Manchester United',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
     {
         name: 'Milan',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
     {
         name: 'Napoli',
-        points: 0,
-        fouls: 0,
+        points,
+        fouls,
     },
 ]
-
 //generare numeri random al posto degli 0 nelle proprietà: points e fouls.
 for (const key in footballTeams) {
-    console.log(footballTeams[key].points);
-    console.log(footballTeams[key].fouls);
+    //seleziono le chiavi degli oggetti 
+    // console.log(footballTeams[key].points);
+    // console.log(footballTeams[key].fouls);
+
+    //genero numero random dentro le variabili dichiarate inizialmente
+    footballTeams[key].points = getRandomInt(1, 10);
+    footballTeams[key].fouls = getRandomInt(1, 10);
 }
 
+console.log(footballTeams); //new values in fouls and points
 
 
+
+
+
+// FUNCTIONS
 
 /**
  * Funzione da MDN per la generazione di numeri random
